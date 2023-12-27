@@ -25,9 +25,9 @@ namespace WebForm
                 string query = "INSERT INTO Class (ClassName, ClassTeacher, SubjectID) VALUES (@cn, @ct, @sid)";
                 SqlCommand cmd = new SqlCommand(query, con);
 
-                cmd.Parameters.AddWithValue("@cn", TxtClssName.Text); // ClassName
-                cmd.Parameters.AddWithValue("@ct", TxtClssTchr.Text); // ClassTeacher
-                cmd.Parameters.AddWithValue("@sid", int.Parse(TxtSbjId.Text)); // SubjectID
+                cmd.Parameters.AddWithValue("@cn", TxtClssName.Text); 
+                cmd.Parameters.AddWithValue("@ct", TxtClssTchr.Text); 
+                cmd.Parameters.AddWithValue("@sid", int.Parse(TxtSbjId.Text)); 
 
                 int rowsAffected = cmd.ExecuteNonQuery();
 
