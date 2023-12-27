@@ -37,11 +37,9 @@ namespace WebForm
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@fn", TxtStdFName.Text);
                 cmd.Parameters.AddWithValue("@ln", TxtStdLName.Text);
-                cmd.Parameters.AddWithValue("@dob", TxtStdCal.SelectedDate); // Use SelectedDate for Calendar
-
+                cmd.Parameters.AddWithValue("@dob", TxtStdCal.SelectedDate); 
                 cmd.Parameters.AddWithValue("@gen", TxtStdGen.Text);
-                cmd.Parameters.AddWithValue("@classId", int.Parse(TxtClsId.Text)); // Assuming TxtClassId is a TextBox for ClassId
-
+                cmd.Parameters.AddWithValue("@classId", int.Parse(TxtClsId.Text)); 
                 int rowsAffected = cmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
